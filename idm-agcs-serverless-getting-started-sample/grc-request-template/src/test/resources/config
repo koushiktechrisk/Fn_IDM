@@ -1,0 +1,6 @@
+[DEFAULT]
+user=ocid1.user.oc1..aaaaaaaadol7kydeunim7imbgch3akvlkhy6tnrndsablxno4qoodvb3gpha
+fingerprint=49:2f:e4:96:ea:b9:d2:6f:36:51:14:49:9f:7e:2c:10
+key_file=<<PEM_FILE_RELATIVE_PATH>>
+tenancy=ocid1.tenancy.oc1..aaaaaaaa23aemdhkyn3txdhp4vqtwxfetrrad4fmwcv7rjul63d7v3etasxq
+region=eu-frankfurt-1

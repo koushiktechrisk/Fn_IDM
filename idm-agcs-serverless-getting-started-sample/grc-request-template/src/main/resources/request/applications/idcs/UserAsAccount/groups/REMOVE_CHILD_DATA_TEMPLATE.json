@@ -1,0 +1,35 @@
+{
+  "id": "1",
+  "name": "User Remove Group membership",
+  "method": "PUT",
+  "uri": {
+    "scheme": "<<SCHEME>>",
+    "host": "epm-302147-plan.hap.fra.demoservices003.oraclepdemos.com",
+    "path": "/interop/rest/security/v2/role/unassign/user"
+  },
+  "headers": [
+    {
+      "name": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "name": "Authorization",
+      "value": "<<CREDENTIALS>>"
+    }
+  ],
+  "body": {
+  "type": "text",  
+  "textBody": {
+    "users": [
+        {
+        "rolename": "<EL>attributes.get('rolename').get(0)</EL>",
+        "users": [
+          {
+            "value": "<EL>attributes.get('userlogin').get(0)</EL>"
+           }
+         ]
+       }
+     ]
+   }
+ }
+}

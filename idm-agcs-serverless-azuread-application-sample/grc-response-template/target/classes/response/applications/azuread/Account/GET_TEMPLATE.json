@@ -1,0 +1,104 @@
+{
+  "attributes": [
+    {
+      "name": "uid",
+      "value": "<JP>$.id</JP>"
+    },
+    {
+      "name": "name",
+      "value": "<JP>$.userPrincipalName</JP>"
+    },
+    {
+      "name": "firstName",
+      "value": "<JP>$.givenName</JP>"
+    },
+    {
+      "name": "lastName",
+      "value": "<JP>$.surname</JP>"
+    },
+    {
+      "name": "displayName",
+      "value": "<JP>$.displayName</JP>"
+    },
+    {
+      "name": "mailNickname",
+      "value": "<JP>$.mailNickname</JP>"
+    },
+    {
+      "name": "usageLocation",
+      "value": "<JP>$.usageLocation</JP>"
+    },
+    {
+      "name": "city",
+      "value": "<JP>$.city</JP>"
+    },
+    {
+      "name": "country",
+      "value": "<JP>$.country</JP>"
+    },
+    {
+      "name": "preferredLanguage",
+      "value": "<JP>$.preferredLanguage</JP>"
+    },
+    {
+      "name": "userType",
+      "value": "<JP>$.userType</JP>"
+    },
+    {
+      "name": "status",
+      "value": "<JP>$.accountEnabled</JP>"
+    },
+    {
+      "name": "officeGroups",
+      "responseOfSubRequestId": "1",
+      "items": "<JP>$.value[*]</JP>",
+      "subAttributes": [
+        {
+          "name": "uid",
+          "value": "<JP>$.value[<EL>currentIndex</EL>].id</JP>"
+        }
+      ]
+    },
+    {
+      "name": "roles",
+      "responseOfSubRequestId": "2",
+      "items": "<JP>$.value[*]</JP>",
+      "subAttributes": [
+        {
+          "name": "uid",
+          "value": "<JP>$.value[<EL>currentIndex</EL>].id</JP>"
+        }
+      ]
+    },
+    {
+      "name": "licenses",
+      "responseOfSubRequestId": "3",
+      "items": "<JP>$.assignedLicenses[*]</JP>",
+      "subAttributes": [
+        {
+          "name": "uid",
+          "value": "<JP>$.assignedLicenses[<EL>currentIndex</EL>].id</JP>"
+        },
+        {
+          "name": "skuId",
+          "value": "<JP>$.assignedLicenses[<EL>currentIndex</EL>].skuId</JP>"
+        },
+        {
+          "name": "name",
+          "value": "<JP>$.assignedLicenses[<EL>currentIndex</EL>].skuPartNumber</JP>"
+        }
+      ]
+    },
+    {
+      "name": "securityGroups",
+      "responseOfSubRequestId": "4",
+      "items": "<JP>$.value[*]</JP>",
+      "subAttributes": [
+        {
+          "name": "uid",
+          "value": "<JP>$.value[<EL>currentIndex</EL>].id</JP>"
+        }
+      ]
+    }
+  ]
+}

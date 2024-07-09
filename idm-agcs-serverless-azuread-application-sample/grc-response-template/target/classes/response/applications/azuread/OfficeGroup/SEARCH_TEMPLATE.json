@@ -1,0 +1,19 @@
+{
+  "items": "<JP>$.value[*]</JP>",
+  "responseValues": [
+    {
+      "name": "token",
+      "value": "<EL>'<JP>$.['@odata.nextLink']</JP>'.split(/\\$skiptoken=([^&]*)/)[1]</EL>"
+    }
+  ],
+  "attributes": [
+    {
+      "name": "uid",
+      "value": "<JP>$.value[<EL>currentIndex</EL>].id</JP>"
+    },
+    {
+      "name": "name",
+      "value": "<JP>$.value[<EL>currentIndex</EL>].displayName</JP>"
+    }
+  ]
+}

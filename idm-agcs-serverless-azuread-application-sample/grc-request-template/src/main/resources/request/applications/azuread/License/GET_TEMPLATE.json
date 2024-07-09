@@ -1,0 +1,20 @@
+{
+  "id": "1",
+  "name": "Get Licenses",
+  "method": "GET",
+  "uri": {
+    "scheme": "<<SCHEME>>",
+    "host": "<<HOST>>",
+    "path": "/v1.0/subscribedSkus/<EL>attributes.get('licenses').get('uid').get(0)</EL>"
+  },
+  "headers": [
+    {
+      "name": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "name": "Authorization",
+      "value": "<<CREDENTIALS>>"
+    }
+  ]
+}

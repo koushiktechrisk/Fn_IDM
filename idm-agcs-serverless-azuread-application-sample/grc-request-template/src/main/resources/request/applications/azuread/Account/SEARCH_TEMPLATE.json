@@ -1,0 +1,145 @@
+{
+  "id": "1",
+  "name": "Search Users sort by displayName",
+  "paginationType": "PAGE_TOKEN",
+  "method": "GET",
+  "uri": {
+    "scheme": "<<SCHEME>>",
+    "host": "<<HOST>>",
+    "path": "/v1.0/users"
+  },
+  "queryParameters": [
+    {
+      "name": "$top",
+      "value": "<EL>pageSize</EL>"
+    },
+    {
+      "name": "$skiptoken",
+      "value": "<EL>previousRequestResponseHeaders.get('token')==null ? '' : previousRequestResponseHeaders.get('token').get(0)</EL>"
+    },
+    {
+      "name": "$select",
+      "value": "assignedLicenses,userType,displayName,givenName,userPrincipalName,id,city,usageLocation,accountEnabled,mailNickname,mail,surname,country,preferredLanguage"
+    }
+  ],
+  "headers": [
+    {
+      "name": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "name": "Authorization",
+      "value": "<<CREDENTIALS>>"
+    }
+  ],
+  "subRequests": [
+    {
+      "id": "1",
+      "name": "Search Office Group membership",
+      "method": "GET",
+      "uri": {
+        "scheme": "<<SCHEME>>",
+        "host": "<<HOST>>",
+        "path": "/v1.0/users/<JP>$.value[<EL>parentCurrentIndex</EL>].id</JP>/memberOf/microsoft.graph.group"
+      },
+      "queryParameters": [
+        {
+          "name": "$count",
+          "value": "true"
+        },
+        {
+          "name": "$filter",
+          "value": "securityEnabled%20eq%20false"
+        }
+      ],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "<<CREDENTIALS>>"
+        },
+        {
+          "name": "ConsistencyLevel",
+          "value": "eventual"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Search Role membership",
+      "method": "GET",
+      "uri": {
+        "scheme": "<<SCHEME>>",
+        "host": "<<HOST>>",
+        "path": "/v1.0/users/<JP>$.value[<EL>parentCurrentIndex</EL>].id</JP>/memberOf/microsoft.graph.directoryRole"
+      },
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "<<CREDENTIALS>>"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Search License membership",
+      "method": "GET",
+      "uri": {
+        "scheme": "<<SCHEME>>",
+        "host": "<<HOST>>",
+        "path": "/v1.0/users/<JP>$.value[<EL>parentCurrentIndex</EL>].id</JP>?$select=assignedLicenses"
+      },
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "<<CREDENTIALS>>"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Search Security Group membership",
+      "method": "GET",
+      "uri": {
+        "scheme": "<<SCHEME>>",
+        "host": "<<HOST>>",
+        "path": "/v1.0/users/<JP>$.value[<EL>parentCurrentIndex</EL>].id</JP>/memberOf/microsoft.graph.group"
+      },
+      "queryParameters": [
+        {
+          "name": "$count",
+          "value": "true"
+        },
+        {
+          "name": "$filter",
+          "value": "securityEnabled%20eq%20true"
+        }
+      ],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "<<CREDENTIALS>>"
+        },
+        {
+          "name": "ConsistencyLevel",
+          "value": "eventual"
+        }
+      ]
+    }
+  ]
+}

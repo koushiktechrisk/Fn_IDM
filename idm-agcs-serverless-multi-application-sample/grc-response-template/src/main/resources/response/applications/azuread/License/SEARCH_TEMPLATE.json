@@ -1,0 +1,17 @@
+{
+  "items": "<JP>$.value[*]</JP>",
+  "attributes": [
+    {
+      "name": "uid",
+      "value": "<JP>$.value[<EL>currentIndex</EL>].id</JP>"
+    },
+    {
+      "name": "skuId",
+      "value": "<JP>$.value[<EL>currentIndex</EL>].skuId</JP>"
+    },
+    {
+      "name": "name",
+      "value": "<JP>$.value[<EL>currentIndex</EL>].skuPartNumber</JP>"
+    }
+  ]
+}

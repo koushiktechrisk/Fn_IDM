@@ -1,0 +1,20 @@
+{
+  "id": "1",
+  "name": "Search Groups sort by displayName",
+  "method": "POST",
+  "uri": {
+    "scheme": "https",
+    "host": "epm-302147-plan.hap.fra.demoservices003.oraclepdemos.com",
+    "path": "/interop/rest/security/v2/role/getavailableroles"
+  },
+  "headers": [
+    {
+      "name": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "name": "Authorization",
+      "value": "<<CREDENTIALS>>"
+    }
+  ]
+}

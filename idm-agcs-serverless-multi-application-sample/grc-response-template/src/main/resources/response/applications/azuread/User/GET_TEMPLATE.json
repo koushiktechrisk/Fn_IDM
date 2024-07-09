@@ -1,0 +1,52 @@
+{
+  "attributes": [
+    {
+      "name": "uid",
+      "value": "<JP>$.id</JP>"
+    },
+    {
+      "name": "name",
+      "value": "<JP>$.mailNickname</JP>"
+    },
+    {
+      "name": "email",
+      "value": "<JP>$.userPrincipalName</JP>"
+    },
+    {
+      "name": "firstName",
+      "value": "<JP>$.givenName</JP>"
+    },
+    {
+      "name": "lastName",
+      "value": "<JP>$.surname</JP>"
+    },
+    {
+      "name": "displayName",
+      "value": "<JP>$.displayName</JP>"
+    },
+    {
+      "name": "usageLocation",
+      "value": "<JP>$.usageLocation</JP>"
+    },
+    {
+      "name": "city",
+      "value": "<JP>$.city</JP>"
+    },
+    {
+      "name": "country",
+      "value": "<JP>$.country</JP>"
+    },
+    {
+      "name": "userType",
+      "value": "<JP>$.userType</JP>"
+    },
+    {
+      "name": "preferredLanguage",
+      "value": "<JP>$.preferredLanguage</JP>"
+    },
+    {
+      "name": "status",
+      "value": "<JP>$.accountEnabled</JP>"
+    }
+  ]
+}

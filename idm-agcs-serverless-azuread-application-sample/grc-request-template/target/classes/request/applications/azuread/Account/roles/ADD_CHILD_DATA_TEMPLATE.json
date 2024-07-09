@@ -1,0 +1,26 @@
+{
+  "id": "1",
+  "name": "User Add Role membership",
+  "method": "POST",
+  "uri": {
+    "scheme": "<<SCHEME>>",
+    "host": "<<HOST>>",
+    "path": "/v1.0/directoryRoles/<EL>attributes.get('roles').get('uid').get(0)</EL>/members/$ref"
+  },
+  "headers": [
+    {
+      "name": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "name": "Authorization",
+      "value": "<<CREDENTIALS>>"
+    }
+  ],
+  "body": {
+    "type": "text",
+    "textBody":{
+      "@odata.id": "https://graph.microsoft.com/v1.0/directoryObjects/<EL>attributes.get('uid').get(0)</EL>"
+    }
+  }
+}

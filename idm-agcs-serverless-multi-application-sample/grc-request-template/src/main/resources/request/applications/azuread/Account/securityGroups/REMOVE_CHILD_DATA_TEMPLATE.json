@@ -1,0 +1,20 @@
+{
+  "id": "1",
+  "name": "User Remove Security Group membership",
+  "method": "DELETE",
+  "uri": {
+    "scheme": "<<SCHEME>>",
+    "host": "<<HOST>>",
+    "path": "/v1.0/groups/<EL>attributes.get('securityGroups').get('uid').get(0)</EL>/members/<EL>attributes.get('uid').get(0)</EL>/$ref"
+  },
+  "headers": [
+    {
+      "name": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "name": "Authorization",
+      "value": "<<CREDENTIALS>>"
+    }
+  ]
+}

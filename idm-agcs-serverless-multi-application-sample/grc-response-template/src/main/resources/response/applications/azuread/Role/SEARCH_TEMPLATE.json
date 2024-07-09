@@ -1,0 +1,13 @@
+{
+  "items": "<JP>$.value[*]</JP>",
+  "attributes": [
+    {
+      "name": "uid",
+      "value": "<JP>$.value[<EL>currentIndex</EL>].id</JP>"
+    },
+    {
+      "name": "name",
+      "value": "<JP>$.value[<EL>currentIndex</EL>].displayName</JP>"
+    }
+  ]
+}

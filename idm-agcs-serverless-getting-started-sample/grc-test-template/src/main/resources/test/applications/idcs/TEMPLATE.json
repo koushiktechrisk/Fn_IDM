@@ -1,0 +1,22 @@
+{
+  "id": "1",
+  "name": "Test connectivity invoking schema API",
+  "method": "GET",
+  "uri":
+  {
+    "scheme": "<<SCHEME>>",
+    "host": "<<HOST>>",
+    "path": "/interop/rest/security/v2/report/roleassignmentreport/user"
+  },
+  "headers":
+  [
+    {
+      "name": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "name": "Authorization",
+      "value": "<<CREDENTIALS>>"
+    }
+  ]
+}

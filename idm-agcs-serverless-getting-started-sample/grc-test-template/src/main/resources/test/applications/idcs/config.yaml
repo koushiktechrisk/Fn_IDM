@@ -1,0 +1,6 @@
+authenticationDetail:
+  secretId: "ocid1.vaultsecret.oc1.eu-frankfurt-1.amaaaaaak4wdnaaaazd5wwn43vvlhmxcslabj6yl25ozt2dbv34yq67aekcq"
+  region: "eu-frankfurt-1"
+applicationInstanceDetail:
+  scheme: "https"
+  host: "epm-302147-plan.hap.fra.demoservices003.oraclepdemos.com"

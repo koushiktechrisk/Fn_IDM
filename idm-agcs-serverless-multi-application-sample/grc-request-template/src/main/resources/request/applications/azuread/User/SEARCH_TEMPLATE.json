@@ -1,0 +1,35 @@
+{
+  "id": "1",
+  "name": "Search Users As Identity sort by displayName",
+  "paginationType": "PAGE_TOKEN",
+  "method": "GET",
+  "uri": {
+    "scheme": "<<SCHEME>>",
+    "host": "<<HOST>>",
+    "path": "/v1.0/users"
+  },
+  "queryParameters": [
+    {
+      "name": "$top",
+      "value": "<EL>pageSize</EL>"
+    },
+    {
+      "name": "$skiptoken",
+      "value": "<EL>previousRequestResponseHeaders.get('token')==null ? '' : previousRequestResponseHeaders.get('token').get(0)</EL>"
+    },
+    {
+      "name": "$select",
+      "value": "assignedLicenses,userType,displayName,givenName,userPrincipalName,id,city,usageLocation,accountEnabled,mailNickname,mail,surname,country,preferredLanguage"
+    }
+  ],
+  "headers": [
+    {
+      "name": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "name": "Authorization",
+      "value": "<<CREDENTIALS>>"
+    }
+  ]
+}

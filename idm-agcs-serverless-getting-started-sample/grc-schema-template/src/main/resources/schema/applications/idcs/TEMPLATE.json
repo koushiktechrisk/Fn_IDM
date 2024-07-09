@@ -1,0 +1,275 @@
+{
+  "schemaTemplates": [
+    {
+      "type": "ACCOUNT",
+      "name": "UserAsIdentity",
+      "displayName": "User As Identity",
+      "attributes": [
+        {
+          "name": "userlogin",
+          "dataType": "TEXT",
+          "nature": [
+            "REQUIRED"
+          ],
+          "usage": [
+            "READ"
+          ]
+        },
+        {
+          "name": "firstname",
+          "dataType": "TEXT",
+          "nature": [
+            "REQUIRED"
+          ],
+          "usage": [
+            "READ"
+          ]
+        },
+        {
+          "name": "lastname",
+          "dataType": "TEXT",
+          "nature": [
+            "REQUIRED"
+          ],
+          "usage": [
+            "READ"
+          ]
+        },
+        {
+          "name": "email",
+          "dataType": "TEXT",
+          "nature": [
+            "REQUIRED"
+          ],
+          "usage": [
+            "READ"
+          ]
+        },
+        {
+          "name": "roles",
+          "dataType": "TEXT",
+          "nature": [
+            "REQUIRED"
+          ],
+          "usage": [
+            "READ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ENTITLEMENT",
+      "name": "RoleAsEntitlement",
+      "displayName": "Group As Entitlement",
+      "attributes": [
+        {
+          "name": "userlogin",
+          "dataType": "TEXT",
+          "nature": [
+            "REQUIRED"
+          ],
+          "usage": [
+            "READ"
+          ]
+        },
+        {
+          "name": "firstname",
+          "dataType": "TEXT",
+          "nature": [
+            "REQUIRED"
+          ],
+          "usage": [
+            "READ"
+          ]
+        },
+        {
+          "name": "lastname",
+          "dataType": "TEXT",
+          "nature": [
+            "REQUIRED"
+          ],
+          "usage": [
+            "READ"
+          ]
+        },
+        {
+          "name": "email",
+          "dataType": "TEXT",
+          "nature": [
+            "REQUIRED"
+          ],
+          "usage": [
+            "READ"
+          ]
+        },
+        {
+          "name": "roles",
+          "dataType": "TEXT",
+          "nature": [
+            "REQUIRED"
+          ],
+          "usage": [
+            "READ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "TARGETACCOUNT",
+      "name": "UserAsAccount",
+      "displayName": "User As Account",
+      "attributes": [
+        {
+          "name": "userlogin",
+          "dataType": "TEXT",
+          "nature": [
+            "REQUIRED"
+          ],
+          "usage": [
+            "READ",
+            "PROVISION"
+          ],
+          "uiProperties": {
+            "inputType": "Auto",
+            "widget": "Text",
+            "title": "User ID",
+            "labelHint": "User ID",
+            "minLength": 1,
+            "maxLength": 256
+          }
+        },
+        {
+          "name": "userlogin",
+          "dataType": "TEXT",
+          "nature": [
+            "REQUIRED"
+          ],
+          "usage": [
+            "READ",
+            "PROVISION"
+          ],
+          "outboundTransformation": {
+            "script": "user.getPrimaryEmail()"
+          },
+          "uiProperties": {
+            "inputType": "Auto",
+            "widget": "Text",
+            "title": "User Name",
+            "labelHint": "User Name",
+            "minLength": 1,
+            "maxLength": 256
+          }
+        },
+        {
+          "name": "email",
+          "dataType": "TEXT",
+          "nature": [
+            "REQUIRED"
+          ],
+          "usage": [
+            "READ",
+            "PROVISION"
+          ],
+          "outboundTransformation": {
+            "script": "user.getPrimaryEmail()"
+          },
+          "uiProperties": {
+            "inputType": "Auto",
+            "widget": "Text",
+            "title": "Email",
+            "labelHint": "Email",
+            "minLength": 1,
+            "maxLength": 256
+          }
+        },
+        {
+          "name": "firstName",
+          "dataType": "TEXT",
+          "usage": [
+            "READ",
+            "PROVISION"
+          ],
+          "outboundTransformation": {
+            "script": "user.getName().getGivenName()"
+          },
+          "uiProperties": {
+            "inputType": "Auto",
+            "widget": "Text",
+            "title": "First Name",
+            "labelHint": "First Name",
+            "minLength": 1,
+            "maxLength": 256
+          }
+        },
+        {
+          "name": "lastName",
+          "dataType": "TEXT",
+          "usage": [
+            "READ",
+            "PROVISION"
+          ],
+          "outboundTransformation": {
+            "script": "user.getName().getFamilyName()"
+          },
+          "uiProperties": {
+            "inputType": "Auto",
+            "widget": "Text",
+            "title": "Last Name",
+            "labelHint": "Last Name",
+            "minLength": 1,
+            "maxLength": 256
+          }
+        },
+        {
+          "name": "password",
+          "dataType": "TEXT",
+          "nature": [
+            "REQUIRED",
+            "SENSITIVE"
+          ],
+          "usage": [
+            "READ",
+            "PROVISION"
+          ],
+          "uiProperties": {
+            "inputType": "User",
+            "widget": "Password",
+            "title": "Password",
+            "labelHint": "Password",
+            "minLength": 1,
+            "maxLength": 256
+          }
+        },
+        {
+          "name": "status",
+          "dataType": "FLAG",
+          "usage": [
+            "READ",
+            "PROVISION"
+          ],
+          "outboundTransformation": {
+            "script": "true"
+          },
+          "uiProperties": {
+            "inputType": "Auto",
+            "widget": "Text",
+            "title": "Status",
+            "labelHint": "Status",
+            "minLength": 1,
+            "maxLength": 256
+          }
+        },
+        {
+          "name": "roles",
+          "dataType": "TEXT",
+          "nature": [
+            "REQUIRED"
+          ],
+          "usage": [
+            "READ"
+          ]
+        }
+      ]
+    }
+  ]
+}

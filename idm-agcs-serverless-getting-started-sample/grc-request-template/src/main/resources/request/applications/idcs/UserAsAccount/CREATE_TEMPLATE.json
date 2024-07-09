@@ -1,0 +1,39 @@
+{
+  "id": "1",
+  "name": "Create User",
+  "method": "POST",
+  "uri": {
+    "scheme": "https",
+    "host": "epm-302147-plan.hap.fra.demoservices003.oraclepdemos.com",
+    "path": "/interop/rest/security/v2/users/add"
+  },
+  "headers": [
+    {
+      "name": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "name": "Authorization",
+      "value": "<<CREDENTIALS>>"
+    }
+  ],
+    "body": {
+      "type": "text",  
+      "textBody": {
+        "users": [
+          {
+            "firstname": "<EL>attributes.get('firstName').get(0)</EL>",
+            "lastname": "<EL>attributes.get('firstName').get(0)</EL>",
+            "email": [
+              {
+                "value": "<EL>attributes.get('email').get(0)</EL>"
+              }
+            ],
+            "userlogin": "<EL>attributes.get('userlogin').get(0)</EL>",
+            "password": "<EL>attributes.get('password').get(0)</EL>",
+            "resetpassword": "<EL>attributes.get('resetpassword').get(0)</EL>"
+          }
+        ]
+      }
+    }
+}

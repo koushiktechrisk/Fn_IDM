@@ -1,0 +1,16 @@
+{
+  "attributes": [
+    {
+      "name": "uid",
+      "value": "<JP>$.id</JP>"
+    },
+    {
+      "name": "skuId",
+      "value": "<JP>$.skuId</JP>"
+    },
+    {
+      "name": "name",
+      "value": "<JP>$.skuPartNumber</JP>"
+    }
+  ]
+}

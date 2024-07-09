@@ -1,0 +1,111 @@
+{
+  "items": "<JP>$.value[*]</JP>",
+  "responseValues": [
+    {
+      "name": "token",
+      "value": "<EL>'<JP>$.['@odata.nextLink']</JP>'.split(/\\$skiptoken=([^&]*)/)[1]</EL>"
+    }
+  ],
+  "attributes": [
+    {
+      "name": "uid",
+      "value": "<JP>$.value[<EL>currentIndex</EL>].id</JP>"
+    },
+    {
+      "name": "name",
+      "value": "<JP>$.value[<EL>currentIndex</EL>].userPrincipalName</JP>"
+    },
+    {
+      "name": "lastName",
+      "value": "<JP>$.value[<EL>currentIndex</EL>].surname</JP>"
+    },
+    {
+      "name": "preferredLanguage",
+      "value": "<JP>$.value[<EL>currentIndex</EL>].preferredLanguage</JP>"
+    },
+    {
+      "name": "usageLocation",
+      "value": "<JP>$.value[<EL>currentIndex</EL>].usageLocation</JP>"
+    },
+    {
+      "name": "country",
+      "value": "<JP>$.value[<EL>currentIndex</EL>].country</JP>"
+    },
+    {
+      "name": "city",
+      "value": "<JP>$.value[<EL>currentIndex</EL>].city</JP>"
+    },
+    {
+      "name": "mailNickname",
+      "value": "<JP>$.value[<EL>currentIndex</EL>].mailNickname</JP>"
+    },
+    {
+      "name": "firstName",
+      "value": "<JP>$.value[<EL>currentIndex</EL>].givenName</JP>"
+    },
+    {
+      "name": "displayName",
+      "value": "<JP>$.value[<EL>currentIndex</EL>].displayName</JP>"
+    },
+    {
+      "name": "userType",
+      "value": "<JP>$.value[<EL>currentIndex</EL>].userType</JP>"
+    },
+    {
+      "name": "status",
+      "value": "<JP>$.value[<EL>currentIndex</EL>].accountEnabled</JP>"
+    },
+    {
+      "name": "officeGroups",
+      "responseOfSubRequestId": "1",
+      "items": "<JP>$.value[*]</JP>",
+      "subAttributes": [
+        {
+          "name": "uid",
+          "value": "<JP>$.value[<EL>currentIndex</EL>].id</JP>"
+        }
+      ]
+    },
+    {
+      "name": "roles",
+      "responseOfSubRequestId": "2",
+      "items": "<JP>$.value[*]</JP>",
+      "subAttributes": [
+        {
+          "name": "uid",
+          "value": "<JP>$.value[<EL>currentIndex</EL>].id</JP>"
+        }
+      ]
+    },
+    {
+      "name": "licenses",
+      "responseOfSubRequestId": "3",
+      "items": "<JP>$.assignedLicenses[*]</JP>",
+      "subAttributes": [
+        {
+          "name": "uid",
+          "value": "<JP>$.assignedLicenses[<EL>currentIndex</EL>].id</JP>"
+        },
+        {
+          "name": "skuId",
+          "value": "<JP>$.assignedLicenses[<EL>currentIndex</EL>].skuId</JP>"
+        },
+        {
+          "name": "name",
+          "value": "<JP>$.assignedLicenses[<EL>currentIndex</EL>].skuPartNumber</JP>"
+        }
+      ]
+    },
+    {
+      "name": "securityGroups",
+      "responseOfSubRequestId": "4",
+      "items": "<JP>$.value[*]</JP>",
+      "subAttributes": [
+        {
+          "name": "uid",
+          "value": "<JP>$.value[<EL>currentIndex</EL>].id</JP>"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "attributes": [
+    {
+      "name": "uid",
+      "value": "<JP>$.userlogin</JP>"
+    },
+    {
+      "name": "name",
+      "value": "<JP>$.userlogin</JP>"
+    },
+    {
+      "name": "firstName",
+      "value": "<JP>$.firstname</JP>"
+    },
+    {
+      "name": "lastName",
+      "value": "<JP>$.lastname</JP>"
+    },
+    {
+      "name": "email",
+      "value": "<JP>$.email</JP>"
+    },
+    {
+      "name": "roles",
+      "value": "<JP>$.roles</JP>"
+    },
+    {
+      "name": "displayName",
+      "value": "<JP>$.userlogin</JP>"
+    },
+    {
+      "name": "status",
+      "value": "<JP>$.active</JP>"
+    }
+  ]
+}

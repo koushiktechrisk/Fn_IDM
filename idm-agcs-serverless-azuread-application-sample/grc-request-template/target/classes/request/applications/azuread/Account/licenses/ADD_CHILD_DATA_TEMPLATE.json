@@ -1,0 +1,31 @@
+{
+  "id": "1",
+  "name": "User Add License membership",
+  "method": "POST",
+  "uri": {
+    "scheme": "<<SCHEME>>",
+    "host": "<<HOST>>",
+    "path": "/v1.0/users/<EL>attributes.get('uid').get(0)</EL>/assignLicense"
+  },
+  "headers": [
+    {
+      "name": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "name": "Authorization",
+      "value": "<<CREDENTIALS>>"
+    }
+  ],
+  "body": {
+    "type": "text",
+    "textBody":{
+      "addLicenses": [
+        {
+          "skuId": "<EL>attributes.get('licenses').get('skuId').get(0)</EL>"
+        }
+      ],
+      "removeLicenses": [  ]
+    }
+  }
+}

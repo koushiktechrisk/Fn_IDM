@@ -1,0 +1,35 @@
+{
+  "id": "1",
+  "name": "Search Office Groups",
+  "paginationType": "PAGE_TOKEN",
+  "method": "GET",
+  "uri": {
+    "scheme": "<<SCHEME>>",
+    "host": "<<HOST>>",
+    "path": "/v1.0/groups"
+  },
+  "queryParameters": [
+    {
+      "name": "$top",
+      "value": "<EL>pageSize</EL>"
+    },
+    {
+      "name": "$skiptoken",
+      "value": "<EL>previousRequestResponseHeaders.get('token')==null ? '' : previousRequestResponseHeaders.get('token').get(0)</EL>"
+    },
+    {
+      "name": "$filter",
+      "value": "securityEnabled%20eq%20false"
+    }
+  ],
+  "headers": [
+    {
+      "name": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "name": "Authorization",
+      "value": "<<CREDENTIALS>>"
+    }
+  ]
+}

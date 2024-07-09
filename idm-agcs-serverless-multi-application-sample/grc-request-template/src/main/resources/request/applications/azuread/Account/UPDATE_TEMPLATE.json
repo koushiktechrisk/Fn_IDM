@@ -1,0 +1,34 @@
+{
+  "id": "1",
+  "name": "Update User",
+  "method": "PATCH",
+  "uri": {
+    "scheme": "<<SCHEME>>",
+    "host": "<<HOST>>",
+    "path": "/v1.0/users/<EL>attributes.get('uid').get(0)</EL>"
+  },
+  "headers": [
+    {
+      "name": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "name": "Authorization",
+      "value": "<<CREDENTIALS>>"
+    }
+  ],
+  "body": {
+    "type": "text",
+    "textBody": {
+      "accountEnabled": "<EL>attributes.get('status').get(0)</EL>",
+      "surname": "<EL>attributes.get('lastName').get(0)</EL>",
+      "userPrincipalName": "<EL>attributes.get('name').get(0)</EL>",
+      "givenName": "<EL>attributes.get('firstName').get(0)</EL>",
+      "mailNickname": "<EL>attributes.get('mailNickname').get(0)</EL>",
+      "displayName": "<EL>attributes.get('displayName').get(0)</EL>",
+      "passwordProfile": {
+        "password": "<EL>attributes.get('password').get(0)</EL>"
+      }
+    }
+  }
+}

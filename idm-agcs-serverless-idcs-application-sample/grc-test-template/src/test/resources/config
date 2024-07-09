@@ -1,0 +1,6 @@
+[DEFAULT]
+user=<<USER>>
+fingerprint=<<FINGERPRINT>>
+key_file=<<PEM_FILE_RELATIVE_PATH>>
+tenancy=<<TENANCY>>
+region=<<REGION>>

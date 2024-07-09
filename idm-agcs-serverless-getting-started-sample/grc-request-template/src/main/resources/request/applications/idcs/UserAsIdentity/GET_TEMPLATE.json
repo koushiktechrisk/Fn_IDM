@@ -1,0 +1,20 @@
+{
+  "id": "1",
+  "name": "Get Group",
+  "method": "GET",
+  "uri": {
+    "scheme": "https",
+    "host": "epm-302147-plan.hap.fra.demoservices003.oraclepdemos.com",
+    "path": "/interop/rest/security/v2/report/roleassignmentreport/user"
+  },
+  "headers": [
+    {
+      "name": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "name": "Authorization",
+      "value": "<<CREDENTIALS>>"
+    }
+  ]
+}

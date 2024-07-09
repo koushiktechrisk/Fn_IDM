@@ -1,0 +1,30 @@
+{
+  "id": "1",
+  "name": "Delete User",
+  "method": "POST",
+  "uri": {
+    "scheme": "https",
+    "host": "epm-302147-plan.hap.fra.demoservices003.oraclepdemos.com",
+    "path": "/interop/rest/security/v2/users/remove"
+  },
+  "headers": [
+    {
+      "name": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "name": "Authorization",
+      "value": "<<CREDENTIALS>>"
+    }
+  ],
+  "body": {
+    "type": "json",
+    "jsonBody": {
+      "users": [
+        {
+          "userlogin": "<EL>attributes.get('userlogin').get(0)</EL>"
+        }
+      ]
+    }
+  }
+}
